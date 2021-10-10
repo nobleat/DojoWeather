@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="nav">
+    <div class="head">
+        <h1>DojoWeather</h1>
+        <ul id="city">
+            <li class="city_links" onclick="popup()"><a href="#">Burbank</a></li>
+            <li class="city_links" onclick="popup()"><a href="#">Chicago</a></li>
+            <li class="city_links" onclick="popup()"><a href="#">Dallas</a></li>
+        </ul>
+    </div>
+</div>
+    <div id="body">
+        <div id="cur_city">
+            <h2 id="current">San Jose</h2>
+            <div id="temp_line">
+                <h4 id="temptext">show temperature in </h4>
+                <select name="temp" id="temp" onchange="temp(this)">
+                    <option value="F">F&deg;</option>
+                    <option value="C">C&deg;</option>
+                </select>
+            </div>
+        </div>
+        <hr>
+        <div id="main">
+            <div id="forecast">
+                <div id="today">
+                    <h3 class="day">Today</h3>
+                    <img src="assets\some_rain.png" alt="rain" class="sky">
+                    <h4 class="words">some rain</h4>
+                    <div class="nums">
+                        <h2 class="high"><span id="c1">24&deg;</span></h2>
+                        <h2 class="low"><span id="c2">18&deg;</span></h2>
+                    </div>
+                </div>
+                <div id="tmrw">
+                    <h3 class="day">Tomorrow</h3>
+                    <img src="assets\some_sun.png" alt="sun" class="sky">
+                    <h4 class="words">some sun</h4>
+                    <div class="nums">
+                        <h2 class="high"><span id="c3">27&deg;</span></h2>
+                        <h2 class="low"><span id="c4">19&deg;</span></h2>
+                    </div>
+                </div>
+                <div id="friday">
+                    <h3 class="day">Friday</h3>
+                    <img src="assets\some_clouds.png" alt="clouds" class="sky">
+                    <h4 class="words">some clouds</h4>
+                    <div class="nums">
+                        <h2 class="high"><span id="c5">21&deg;</span></h2>
+                        <h2 class="low"><span id="c6">16&deg;</span></h2>
+                    </div>
+                </div>
+                <div id="saturday">
+                    <h3 class="day">Saturday</h3>
+                    <img src="assets\some_sun.png" alt="run" class="sky">
+                    <h4 class="words">some sun</h4>
+                    <div class="nums">
+                        <h2 class="high"><span id="c7"></span>26&deg;</h2>
+                        <h2 class="low"><span id="c8"></span>21&deg;</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="cookies">
+            <img src="assets\cookie.png" alt="cookie" id="cookieimg">
+            <div id="cookietext">
+                <h3 id="cookie">Stop! Cookie Time</h3>
+                <p>We use cookies (sadly not the edible ones) to personalize contect and ads, to provide social media feature and to analyse our traffic. <a href="#" id="read">Read more...</a></p>
+            </div>
+            <button onclick="acceptcookie()">I Accept</button>
+        </div>
+    </div>
+</div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
